@@ -76,8 +76,9 @@
     <button onclick="searchNews()">검색</button>
     <div id="result"></div>
 
-    <script src = "https://code.jquery.com/jquery-3.4.1.js">
-        function searchNews() {
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        window.searchNews = function() {
             var keyword = document.getElementById('keyword').value;
             fetch(`/news?keyword=${encodeURIComponent(keyword)}`)
                 .then(response => response.json())
@@ -92,6 +93,7 @@
                 })
                 .catch(error => console.error('Error:', error));
         }
-    </script>
+    });
+</script>
 </body>
 </html>
