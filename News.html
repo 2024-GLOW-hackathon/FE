@@ -76,7 +76,7 @@
     <button onclick="searchNews()">검색</button>
     <div id="result"></div>
 
-    <script>
+    <script src = "https://code.jquery.com/jquery-3.4.1.js">
         function searchNews() {
             var keyword = document.getElementById('keyword').value;
             fetch(`/news?keyword=${encodeURIComponent(keyword)}`)
