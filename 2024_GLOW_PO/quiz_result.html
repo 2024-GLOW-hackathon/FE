@@ -39,13 +39,18 @@
 
     <h1>모든 문제를 풀었습니다!</h1>
     <p id="result"></p>
+    <button onclick="goToMainPage()">메인 페이지로 돌아가기</button>
 
     <script>
         function showResult() {
             const correctCount = localStorage.getItem('correctCount');
             const wrongCount = localStorage.getItem('wrongCount');
 
-            document.getElementById('result').innerText = `당신은 총 3문제 중 ${correctCount}문제를 맞췄고, ${wrongCount}문제 틀렸습니다.`;
+            document.getElementById('result').innerText = '당신은 총 3문제 중 ${correctCount}문제를 맞췄고, ${wrongCount}문제를 틀렸습니다.';
+            
+        }
+        function goToMainPage() {
+            window.location.href = 'index.html';
         }
 
         showResult();
