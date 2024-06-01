@@ -79,7 +79,7 @@
     <script>
         function searchNews() {
             var keyword = document.getElementById('keyword').value;
-            fetch(`/api/news?keyword=${encodeURIComponent(keyword)}`)
+            fetch(`/news?keyword=${encodeURIComponent(keyword)}`)
                 .then(response => response.json())
                 .then(data => {
                     var newsHtml = data.items.map(item => 
